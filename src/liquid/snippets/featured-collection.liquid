@@ -1,0 +1,24 @@
+{%- comment -%}
+    Require the following Argument
+    - settings
+{%- endcomment -%}
+
+<section class="featured-products">
+    <div class="featured-products__left">
+        <h2 class="featured-products__heading">
+            {{ collections[settings.collection].title }}
+        </h2>
+        <img src="{{ collections[settings.collection].image | img_url: 'master' }}" alt="collection image">
+        <div class="featured-products__left-backdiv"></div>
+    </div>
+    
+    <div class="featured-products__right">
+        <div class="featured-products__right-top">
+            <div class="featured-products__right-line"></div>
+            <span class="featured-products__right-text">{{ collections[settings.collection].description }}</span>
+        </div>
+        <div class="featured-products__right-items">
+            {% render 'product-tile' for collections[settings.collection].products as product %}
+        </div>
+    </div>
+</section>

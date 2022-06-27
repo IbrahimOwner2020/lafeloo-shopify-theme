@@ -1,0 +1,47 @@
+<section class="question">
+    <div class="question__div">
+        <div class="question__top">
+            <h2 class="question__title">{{ section.settings.question_title }}</h2>
+            <div class="question__top-info">
+                <div class="question__top-line"></div>
+                <span class="question__text">{{ section.settings.question_text }}</span>
+            </div>
+        </div>
+        <div class="question__bottom">
+            {% render 'according' %}
+            <div class="question__btn">
+                <a href="#">Still have unanswered questions? Get in touch</a>
+            </div>
+        </div>
+        <div class="back-icons">
+            <img src="{{ 'icons.svg' | asset_url }}" alt="Icons">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Question",
+        "settings": [
+            {
+                "type": "text",
+                "id": "question_title",
+                "label": "Section Title",
+                "default": "Hello World"
+            },
+            {
+                "type": "text",
+                "id": "question_text",
+                "label": "Section Text",
+                "default": "Leggings farm-to-table chillwave seitan, tumeric selvage franzen swag +1 mumblecore drinking vinegar synth. Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            }
+        ],
+        "presets": [
+            {
+                "category": "Questions that have been asked",
+                "name":"Questions"
+            }
+        ]
+    }
+{% endschema %}
+

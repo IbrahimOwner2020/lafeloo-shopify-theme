@@ -1,0 +1,105 @@
+<section class="testimony">
+    <div class="testimony__top">
+        <h2 class="testimony__title">{{ section.settings.testimo_title }}</h2>
+        <div class="testimony__text">{{ section.settings.testimo_text }}</div>
+        <div class="testimony__top-backblue"></div>
+    </div>
+    <div class="testimony__cards">
+        <div class="testimony__card">
+            <div class="testimony__card-top">
+                <img class="testimony__card-top__img" src="{{ section.settings.testimo_img1 | img_url: 'master' }}" alt="image 1">
+                <img class="testimony__card-top__svg" src="{{ 'quotes.svg' | asset_url }}" alt="image 1">
+            </div>
+            <span class="testimony__card-name">{{ section.settings.person_subject }}</span>
+            <span class="testimony__card-testimony">{{ section.settings.person_testimony }}</span>
+            <div class="testimony__card-person">
+                <span class="testimony__card-person-name">{{ section.settings.person_name }}</span>
+                <div class="testimony__card-rates">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rates.svg' | asset_url }}" alt="image 1">
+                </div>
+            </div>
+        </div>
+        <div class="testimony__card">
+            <div class="testimony__card-top">
+                <img class="testimony__card-top__img" src="{{ section.settings.testimo_img2 | img_url: 'master' }}" alt="image 1">
+                <img class="testimony__card-top__svg" src="{{ 'quotes.svg' | asset_url }}" alt="image 1">
+            </div>
+            <span class="testimony__card-name">{{ section.settings.person_subject }}</span>
+            <span class="testimony__card-testimony">{{ section.settings.person_testimony }}</span>
+            <div class="testimony__card-person">
+                <span class="testimony__card-person-name">{{ section.settings.person_name }}</span>
+                <div class="testimony__card-rates">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rate.svg' | asset_url }}" alt="image 1">
+                    <img class="testimony__card-top__svg" src="{{ 'rates.svg' | asset_url }}" alt="image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimony__end">
+        <div class="testimony__end-line"></div>
+        <img src="{{ 'left-arrow.svg' | asset_url }}" alt="image 1">
+        <img src="{{ 'right-arrow-pink.svg' | asset_url }}" alt="image 1">
+    </div>
+    <div class="testimony__backdarkblue"></div>
+</section>
+
+{% schema %}
+    {
+        "name": "Testimony",
+        "settings": [
+            {
+                "type": "text",
+                "id": "testimo_title",
+                "label": "Section Title",
+                "default": "Hello World"
+            },
+            {
+                "type": "text",
+                "id": "testimo_text",
+                "label": "Section Text",
+                "default": "Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            },
+            {
+                "type": "image_picker",
+                "id": "testimo_img1",
+                "label": "Person 1"
+            },
+            {
+                "type": "image_picker",
+                "id": "testimo_img2",
+                "label": "Person 2"
+            },
+            {
+                "type": "text",
+                "id": "person_subject",
+                "label": "Person Subject",
+                "default": "Ibrahim Frank"
+            },
+            {
+                "type": "text",
+                "id": "person_name",
+                "label": "Person Name",
+                "default": "Ibrahim Frank"
+            },
+            {
+                "type": "text",
+                "id": "person_testimony",
+                "label": "Person Text",
+                "default": "Leggings farm-to-table chillwave seitan, tumeric selvage franzen swag +1 mumblecore drinking vinegar synth. Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            }
+        ],
+        "presets": [
+            {
+                "category": "Testimony",
+                "name":"Testimony"
+            }
+        ]
+    }
+{% endschema %}

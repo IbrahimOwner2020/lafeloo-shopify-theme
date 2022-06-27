@@ -1,0 +1,36 @@
+{%- comment -%}
+    Require the following Argument
+    - settings
+{%- endcomment -%}
+
+<section class="hero">
+    <div class="hero__backcream"></div>
+    <div class="hero__left">
+        <h2 class="hero__title">{{ settings.hero_title }}</h2>
+        <div class="hero__details">
+            <div class="hero__details-line"></div>
+            <div class="hero__details-items">
+                <span class="hero__details-text">{{ settings.hero_text }}</span>
+                <a href="{{ settings.btn_url }}" class="hero__details-link">{{ settings.link_text }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero__right">
+        <img src="{{ settings.hero_img | img_url: 'master' }}" alt="Hero image" class="hero__right-img">
+        <div class="hero__right-backrectangle"></div>
+        <img class="hero__right-arrow" src="{{ 'right-arrow.svg' | asset_url }}" alt="arro-right">
+
+        <div class="hero__right-icons">
+            <span class="hero__right-icon">
+                <img src="{{ 'twitter.svg' | asset_url }}"  alt="twitter" itemprop="logo"/>  
+            </span>
+            <span class="hero__right-icon">
+                <img src="{{ 'facebook.svg' | asset_url }}"  alt="facebook" itemprop="logo"/> 
+            </span>
+            <span class="hero__right-icon">
+                <img src="{{ 'instagram.svg' | asset_url }}"  alt="instagram" itemprop="logo"/> 
+            </span>
+        </div>
+        <div class="hero__right-backblue"></div>
+    </div>
+</section>

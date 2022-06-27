@@ -1,0 +1,32 @@
+.product-tile {
+    background: #FFFFFF;
+    text-decoration: none;
+
+    &__image {  
+        width: 100%;
+        height: auto;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem .8rem;
+        font-family: $font-avenir;
+    }
+
+    &__title {
+        font-size: 1rem;
+        color: $color-text-2;
+    }
+
+    &__price {
+        color: $color-back-1;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    &:first-of-type {
+        box-shadow: 0px 10px 20px rgba(86, 72, 72, 0.1);
+    }
+}

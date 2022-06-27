@@ -1,0 +1,55 @@
+<section class="lafelo">
+    <div class="lafelo__back">
+        <img src="{{ 'back.jpg' | asset_url }}" alt="back image">
+    </div>
+    <div class="lafelo__div">
+        <div class="lafelo__left">
+            <h2 class="lafelo__title">{{ section.settings.sec_title }}</h2>
+            <div class="lafelo__info">
+                <div class="lafelo__info-line"></div>
+                <span class="lafelo__text">{{ section.settings.sec_text }}</span>
+            </div>        
+            <img src="{{ section.settings.sec_img1 | img_url: 'master' }}" alt="lafelo image" class="lafelo__img">
+        </div>
+        <div class="lafelo__right">
+            <img class="lafelo__photo" src="{{ section.settings.sec_img2 | img_url: 'master' }}" alt="lafelo image" class="lafelo__img">
+            <img class="lafelo__icons" src="{{ 'icons.svg' | asset_url }}" alt="Icons">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Name Lafelo",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "sec_img1",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "sec_img2",
+                "label": "Section Image"
+            },
+            {
+                "type": "text",
+                "id": "sec_title",
+                "label": "Section Title",
+                "default": "Hello World"
+            },
+            {
+                "type": "text",
+                "id": "sec_text",
+                "label": "Section Text",
+                "default": "Leggings farm-to-table chillwave seitan, tumeric selvage franzen swag +1 mumblecore drinking vinegar synth. Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            }
+        ],
+        "presets": [
+            {
+                "category": "Name Lafelo",
+                "name":"Name Lafelo"
+            }
+        ]
+    }
+{% endschema %}

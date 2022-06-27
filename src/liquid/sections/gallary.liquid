@@ -1,0 +1,100 @@
+<section class="gallary">
+    <div class="gallary__title">
+        <h2>{{ section.settings.gall_title }}</h2>
+        <div></div>
+    </div>
+    <div class="gallary__photos">
+        <div class="gallary__photos-item1">
+            <img src="{{ section.settings.gall_1 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item2">
+            <img src="{{ section.settings.gall_2 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item3">
+            <img src="{{ section.settings.gall_3 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item4">
+            <img src="{{ section.settings.gall_4 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item5">
+            <img src="{{ section.settings.gall_5 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item6">
+            <img src="{{ section.settings.gall_6 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item7">
+            <img src="{{ section.settings.gall_7 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item8">
+            <img src="{{ section.settings.gall_8 | img_url: 'master' }}" alt="gallary image">
+        </div>
+        <div class="gallary__photos-item9">
+            <img src="{{ section.settings.gall_9 | img_url: 'master' }}" alt="gallary image">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Gallary",
+        "settings": [
+            {
+                "type": "text",
+                "id": "gall_title",
+                "label": "Title",
+                "default": "Gallary title"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_1",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_2",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_3",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_4",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_5",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_6",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_7",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_8",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "gall_9",
+                "label": "Section Image"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Gallary",
+                "name": "Gallary"
+            }
+        ]
+    }
+{% endschema %}

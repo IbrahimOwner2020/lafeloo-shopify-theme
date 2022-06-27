@@ -1,0 +1,54 @@
+{%- comment -%}
+    passing the following arguments
+
+    -settings
+{%- endcomment -%}
+
+<hr class="footer_hr">
+<footer class="footer">
+    <div class="footer__company">
+        <h3 class="footer__company-title">{{ settings.company_name }}</h3>
+        <p class="footer__company-text">{{ settings.company_text }}</p>
+        <div class="footer__company-icons">
+            <span class="footer__company-icon">
+                <img src="{{ 'twitter.svg' | asset_url }}"  alt="twitter" itemprop="logo"/>  
+            </span>
+            <span class="footer__company-icon">
+                <img src="{{ 'facebook.svg' | asset_url }}"  alt="facebook" itemprop="logo"/> 
+            </span>
+            <span class="footer__company-icon">
+                <img src="{{ 'instagram.svg' | asset_url }}"  alt="instagram" itemprop="logo"/> 
+            </span>
+        </div>
+    </div>
+    <div class="footer__menu">
+        <h3 class="footer__menu-title">Menu</h3>
+        <ul class="footer__menu-list">
+        {% for link in linklists.main-menu.links %}
+            <li class="footer__menu-item">
+                <a class="footer__menu-link" href= "{{ link.url }}">{{ link.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="footer__contact">
+        <h3 class="footer__contact-title">Stay Connected</h3>
+        <div class="footer__contact-item">
+            <div class="footer__contact-item-child">
+                <img src="{{ 'location.svg' | asset_url }}"  alt="location" itemprop="logo"/> 
+                <span>{{ settings.location_text }}</span>
+            </div>
+            <div class="footer__contact-item-child">
+                <img src="{{ 'phone.svg' | asset_url }}"  alt="phone" itemprop="logo"/> 
+                <span>{{ settings.phone_text }}</span>
+            </div>
+            <div class="footer__contact-item-child">
+                <img src="{{ 'world.svg' | asset_url }}"  alt="world" itemprop="logo"/> 
+                <span>{{ settings.world_text }}</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <span class="copyright__text">Copyright &copy; {{ settings.copyright_text }}</span>
+</div>

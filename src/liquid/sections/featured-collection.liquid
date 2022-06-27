@@ -1,0 +1,22 @@
+{% render 'featured-collection' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Featured Collection",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Select a collection",
+                "name":"Featured Products"
+            }
+        ]
+    }
+{% endschema %}

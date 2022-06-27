@@ -1,0 +1,47 @@
+{% render 'footer' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Footer",
+        "settings": [
+            {
+                "type": "text",
+                "id": "company_name",
+                "label": "Compant Title",
+                "default": "Your company name"
+            },
+            {
+                "type": "text",
+                "id": "company_text",
+                "label": "Compant Text",
+                "default": "I'm baby hella godard health goth cray photo booth vinyl hammock stumptown"
+            },
+            {
+                "type": "text",
+                "id": "copyright_text",
+                "label": "Copyright Text",
+                "default": "insert your copyright text here"
+            },
+            {
+                "type": "text",
+                "id": "location_text",
+                "label": "Company Location",
+                "default": "Dar es salaam, Tanzania"
+            },
+            {
+                "type": "text",
+                "id": "phone_text",
+                "label": "Contacts",
+                "default": "+255 764 649 881"
+            },
+            {
+                "type": "text",
+                "id": "world_text",
+                "label": "Website Link",
+                "default": "www.kidibra.com"
+            }
+        ]
+    }
+{% endschema %}

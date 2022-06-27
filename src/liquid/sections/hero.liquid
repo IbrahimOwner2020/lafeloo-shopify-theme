@@ -1,0 +1,45 @@
+{% render 'hero' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Hero",
+        "settings": [
+            {
+                "type": "text",
+                "id": "hero_title",
+                "label": "Hero Title",
+                "default": "Your hero title"
+            },
+            {
+                "type": "text",
+                "id": "hero_text",
+                "label": "Hero text",
+                "default": "Echo park sriracha hammock kogi hexagon heirloom, ramps green juice pok pok"
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link text",
+                "default": "Click here"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Button Url"
+            },
+            {
+                "type": "image_picker",
+                "id": "hero_img",
+                "label": "Hero Image"
+            }
+        ],
+        "presets": [
+            {
+                "category": "A hero page",
+                "name":"Hero"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,168 @@
+.footer {
+    max-width: 1024px;
+    margin: 2rem auto;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-column-gap: 1rem;
+    grid-auto-rows: min-content;
+    grid-row-gap: 2rem;
+
+    &__company {
+        width: 310px;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-family: $font-avenir;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-text-1;
+            margin-bottom: 1rem;
+        }
+
+        &-text {
+            font-family: $font-avenir;
+            font-size: .9rem;
+            font-weight: 400;
+            color: $color-text-2;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        &-icons {
+            flex: 1;
+        }
+
+        &-icon {
+            margin-right: .8rem;
+
+            & img {
+                width: .8rem;
+                height: .8rem;
+                border: 1px solid $color-text-2;
+                border-radius: 50%;
+                padding: 6px;
+            }
+        }
+    }
+
+    &__menu {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0;
+
+        &-title {
+            font-family: $font-avenir;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-text-1;
+            margin-bottom: 1rem;
+        }
+
+        &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-item {
+            margin-bottom: 1rem;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $color-text-2;
+            font-family: $font-avenir;
+            font-weight: 400;
+            font-size: .9rem;
+        }
+    }
+
+    &__contact {
+        width: 330px;
+
+        &-title {
+            font-family: $font-avenir;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $color-text-1;
+            margin-bottom: 1rem;
+        }
+
+        &-item {
+
+            &-child {
+                margin-bottom: .8rem;
+                display: flex;
+                align-items: center;
+
+                & img {
+                    margin-right: .8rem;
+                    width: .8rem;
+                    height: .8rem;
+                }
+
+                & span {
+                    color: $color-text-2;
+                    font-family: $font-avenir;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    background-color: #F9FCFF;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    &__text {
+        font-size: .9rem;
+        font-weight: 600;
+        color: #4E5D78;
+        font-family: $font-avenir;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .footer {
+        margin: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1rem;
+        grid-auto-rows: min-content;
+        grid-row-gap: 2rem;
+        
+        &__contact {
+            width: 100%;
+        }
+
+        &__company {
+            width: 100%;
+        }
+    }
+
+    .copyright {
+        
+        &__text {
+            font-size: .7rem;
+        }
+    }
+}
+
+.footer_hr {
+    width: 100%;
+    height: 1px;
+    color: $color-text-2;
+    margin: 4rem 0;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+$font-avenir: 'avenirRegular';
+$font-oleo: 'Oleo Script Swash Caps', cursive;
+$color-text-1: #080E39;
+$color-text-2: #4E5D78;
+$color-back-1: #D03090;
+$color-back-2: #DFEBF9;
+$color-back-3: #FFF2FA;

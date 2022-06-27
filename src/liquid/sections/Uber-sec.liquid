@@ -1,0 +1,43 @@
+<section class="uber">
+    <div class="uber__left">
+        <img src="{{ section.settings.sec_img | img_url: 'master' }}" alt="uber image" class="uber__img">
+        <div class="uber__left-backblue"></div>
+        <div class="uber__left-backcream"></div>
+    </div>
+    <div class="uber__right">
+        <h2 class="uber__title">{{ section.settings.sec_title }}</h2>
+        <div class="uber__right-line"></div>
+        <span class="uber__text">{{ section.settings.sec_text }}</span>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Uber Uns",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "sec_img",
+                "label": "Section Image"
+            },
+            {
+                "type": "text",
+                "id": "sec_title",
+                "label": "Section Title",
+                "default": "Hello World"
+            },
+            {
+                "type": "text",
+                "id": "sec_text",
+                "label": "Section Text",
+                "default": "Leggings farm-to-table chillwave seitan, tumeric selvage franzen swag +1 mumblecore drinking vinegar synth. Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            }
+        ],
+        "presets": [
+            {
+                "category": "Uber Uns",
+                "name":"Uber Uns"
+            }
+        ]
+    }
+{% endschema %}

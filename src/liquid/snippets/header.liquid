@@ -1,0 +1,71 @@
+{%- comment -%}
+    passing the following arguments
+
+    -settings
+{%- endcomment -%}
+
+
+<header class="header">
+    <div class="header__logo">
+        {%- if template.name == 'index' -%}
+            <h1 itemscope itemtype="http://schema.org/Organization">
+        {%- else -%}
+            <div itemscope itemtype="http://schema.org/Organization">
+        {%- endif -%}
+
+            {%- if settings.logo -%}
+                <a href="/" itemprop="url">
+                    {% capture image_size %}{{ settings.logo_width }}x{% endcapture %}
+                    <img src="{{ settings.logo | img_url : image_size }}"
+                    alt="{{ shop.name }}"
+                    itemprop="logo">
+                </a>
+            {%- else -%}
+                <a class="header__logo-text" href="/" itemprop="url">
+                    <span>{{ shop.name }}</span>
+                </a>
+            {%- endif -%}
+        {%- if template.name == 'index' -%}
+            </h1>
+        {%- else -%}
+            </div>
+        {%- endif -%}
+    </div>
+    <div class="header__nav">
+        <ul class="header__nav-list">
+        {% for link in linklists.main-menu.links %}
+            <li class="header__nav-item"><a class="header__nav-link" href= "{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="header__icons">
+        <span class="header__icons-search">
+            <img src="{{ 'search.svg' | asset_url }}" alt="search icon">
+        </span>
+        <span class="header__icons-cart">
+            <img src="{{ 'cart.svg' | asset_url }}" alt="search icon">
+        </span>
+    </div>
+    
+    <nav class="phone" role="navigation">
+        <div id="menuArea">
+        <input type="checkbox" id="menuToggle"></input>
+        
+        <label for="menuToggle" class="menuOpen">
+        <div class="open"></div>
+        </label>
+        
+        <div class="menu menuEffects">
+        <label for="menuToggle"></label>
+        <div class="menuContent">
+            <ul>
+            {% for link in linklists.main-menu.links %}
+                <li><a href= "{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        </div>
+        </div>
+    </nav>
+</header>
+<hr class="header_hr">

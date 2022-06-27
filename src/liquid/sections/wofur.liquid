@@ -1,0 +1,67 @@
+<section class="wofur">
+    <div class="wofur__left">
+        <img src="{{ section.settings.sec_img1 | img_url: 'master' }}" alt="wofur image" class="wofur__img">     
+        <img src="{{ section.settings.sec_img3 | img_url: 'master' }}" alt="wofur image" class="wofur__img">     
+        <img src="{{ section.settings.sec_img2 | img_url: 'master' }}" alt="wofur image" class="wofur__img">
+    </div>
+    <div class="wofur__right">
+        <div class="wofur__right-line"></div>
+        <div class="wofur__right-backcream"></div>
+        <h2 class="wofur__title">{{ section.settings.sec_title }}</h2>
+        <span class="wofur__text">{{ section.settings.sec_text }}</span>
+        <a href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+        <img class="wofur__icons" src="{{ 'icons.svg' | asset_url }}" alt="Icons">
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Wofur",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "sec_img1",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "sec_img2",
+                "label": "Section Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "sec_img3",
+                "label": "Section Image"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Link Text",
+                "default": "click here"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Link Url"
+            },
+            {
+                "type": "text",
+                "id": "sec_title",
+                "label": "Section Title",
+                "default": "Hello World"
+            },
+            {
+                "type": "text",
+                "id": "sec_text",
+                "label": "Section Text",
+                "default": "Leggings farm-to-table chillwave seitan, tumeric selvage franzen swag +1 mumblecore drinking vinegar synth. Succulents stumptown organic try-hard iceland 3 wolf moon, raw denim jean shorts woke hexagon synth slow-carb gochujang."
+            }
+        ],
+        "presets": [
+            {
+                "category": "Wofur",
+                "name":"Wofur"
+            }
+        ]
+    }
+{% endschema %}
